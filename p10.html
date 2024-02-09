@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter{
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>meter tag</h1>
+    <p>same like a progress tag but with green color</p>
+ 
+    <hr>
+    <h1>deafult meter tag</h1>
+    <p>it has no green line bcz no values entered</p>
+    <meter></meter>
+    <hr>
+    <h1>static meter tag</h1>
+    <meter min="1" max="100" value="50"></meter>
+    <hr>
+    <h1>dynamic meter tag</h1>
+    <meter min="1" max="100" id="meter"></meter>
+    <p>@<span>1</span>% complete</p>
+    <hr>
+    <script>
+        let minScript=1;
+        function updateProcess(){
+            if(minScript<=100){
+                minScript++;
+                document.querySelector('#meter').value=minScript;
+                document.querySelector('span').innerHTML=minScript;
+    
+            }
+        }
+        setInterval("updateProcess()",1000);
+        </script>
+</body>
+</html>

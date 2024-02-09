@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CANVAS TAG</h1>
+    <p>canvas used for graphics and for canvas script is mandatory</p>
+   <hr>
+   <canvas>this is canvas tag</canvas>
+   <p>it also wont allow the text inside </p>
+   <canvas id="myCanvas2" width="250" height="250" style="border:2px solid blue;"></canvas>
+   <p><b>always necessary to give id attribute bcz for scripting purpose and height and width also imp</b></p>
+   <hr>
+   <center>
+    <h2>fillRect()</h2>
+    
+   </center>
+
+   <script>
+    let canvas=document.getElementById("myCanvas2").getContext("2d");
+    canvas.fillStyle="red";
+    canvas.fillRect(25,25,200,100);
+    </script>
+<center>
+<h2>circle</h2>
+</center>
+<canvas id="myCanvas3" width="200" height="200" style="border:2px solid black;"></canvas>
+
+
+  <script>
+    let canvas2=document.getElementById("myCanvas3").getContext("2d");
+    canvas2.fillStyle="red";
+    canvas2.arc(100,100,90,0,2*Math.PI);
+    canvas2.fill();
+    </script>
+    <hr>
+<center>
+    <h3>drawing text on canvas</h3>
+
+</center>
+<canvas id="myCanvas" width="578" height="200" style="border:2px solid black;"></canvas>
+
+
+<script>
+    let canvas3=document.getElementById("myCanvas").getContext("2d");
+    canvas3.font='40pt Times New Roman';
+    canvas3.fillStyle="red";
+
+    canvas3.fillText("hello",150,100);
+    </script>
+</body>
+</html>

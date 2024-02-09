@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog{
+            background-color: lightgrey;
+            color:black; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h3>dialog tag</h3>
+        <p>used for the dialog box</p>
+    </center>
+    <hr>
+    <dialog>
+        <button type="button" id="closeButton">&times;</button>
+<h1>FILL STACK</h1>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum velit iste saepe impedit, id temporibus autem laborum sunt beatae fuga error similique, tenetur omnis itaque quis, distinctio provident nisi. Voluptatum aperiam dolorum corrupti tempora qui incidunt reiciendis eveniet. Amet, sit.</p>
+
+
+    </dialog>
+
+ 
+    <button type="button" id="openButton">open dialog</button>
+    
+
+</body>
+<script>
+      document.querySelector('#openButton').onclick=function(){
+        document.querySelector('dialog').showModal();
+    }
+    document.querySelector('#closeButton').onclick=function(){
+        document.querySelector('dialog').close();
+    }
+     </script>
+</html>
